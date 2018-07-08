@@ -10,57 +10,35 @@ int main(int argc, char* argv[]) {
         if (std::string(argv[i]) == "-k") {
             if (i + 1 < argc) {
                 keyFile = argv[++i];
-                std::cout << keyFile;
             } else {
                 std::cerr << "-k option requires argument";
                 return 1;
             }
         }
         // thread count argument handling goes here
-
     }
 
-    streampos size;
+    std::streampos size;
     char * memblock;
+    std::ifstream file (keyFile, std::ios::in|std::ios::binary|std::ios::ate);
 
-//    int keyByte = 0b11111111 & stoi("fb", nullptr, 16);
-    auto keyByte = (uint8_t) stoi("fb", nullptr, 16);
-    int plainByte = stoi("0x01", nullptr, 16);
+    if (file.is_open())
+    {
+        size = file.tellg();
+        memblock = new char [size];
+        file.seekg (0, std::ios::beg);
+        file.read (memblock, size);
 
-    int cypherByte = keyByte ^ plainByte;
+        file.close();
 
-//    cout << keyByte << endl;
-//    auto binTemp = static_cast<uint8_t >(keyByte);
-//    auto binTemp = (uint8_t) keyByte;
-    cout << sizeof(keyByte);
-    cout << unsigned(keyByte) << endl;
+        std::cout << memblock;
 
-//    cout << sizeof(keyByte);
-//    char bintemp = 0xff & keyByte;
-//    cout << sizeof(binTemp);
-//    cout << binTemp << endl;
-//    cout << keyByte << endl;
-//    cout << plainByte << endl;
-//    cout << cypherByte << endl;
+        std::cout << "\n\nthe entire file content is in memory\n\n";
 
-//    ifstream file ("key.bin", ios::in|ios::binary|ios::ate);
-//    if (file.is_open())
-//    {
-//        size = file.tellg();
-//        memblock = new char [size];
-//        file.seekg (0, ios::beg);
-//        file.read (memblock, size);
-//
-//        file.close();
-//
-//        cout << "\n\nthe entire file content is in memory\n\n";
-//
-//        delete[] memblock;
-//    }
-//
-//
-//    else cout << "Unable to open file";
-//
+        delete[] memblock;
+    }
+
+    else std::cout << "Unable to open file";
 
     return 0;
 }
