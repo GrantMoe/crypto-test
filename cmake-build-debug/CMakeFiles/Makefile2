@@ -45,10 +45,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5540.8/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -E remove -f
+RM = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5540.8/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/grant/Workspace/git/crypto-test
 CMAKE_BINARY_DIR = /home/grant/Workspace/git/crypto-test/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/crypto_coding_test.dir
+# Target rules for target CMakeFiles/crypto_test.dir
 
 # All Build rule for target.
-CMakeFiles/crypto_coding_test.dir/all:
-	$(MAKE) -f CMakeFiles/crypto_coding_test.dir/build.make CMakeFiles/crypto_coding_test.dir/depend
-	$(MAKE) -f CMakeFiles/crypto_coding_test.dir/build.make CMakeFiles/crypto_coding_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/grant/Workspace/git/crypto-test/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target crypto_coding_test"
-.PHONY : CMakeFiles/crypto_coding_test.dir/all
+CMakeFiles/crypto_test.dir/all:
+	$(MAKE) -f CMakeFiles/crypto_test.dir/build.make CMakeFiles/crypto_test.dir/depend
+	$(MAKE) -f CMakeFiles/crypto_test.dir/build.make CMakeFiles/crypto_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/grant/Workspace/git/crypto-test/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target crypto_test"
+.PHONY : CMakeFiles/crypto_test.dir/all
 
 # Include target in all.
-all: CMakeFiles/crypto_coding_test.dir/all
+all: CMakeFiles/crypto_test.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/crypto_coding_test.dir/rule: cmake_check_build_system
+CMakeFiles/crypto_test.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/grant/Workspace/git/crypto-test/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/crypto_coding_test.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/crypto_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/grant/Workspace/git/crypto-test/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/crypto_coding_test.dir/rule
+.PHONY : CMakeFiles/crypto_test.dir/rule
 
 # Convenience name for target.
-crypto_coding_test: CMakeFiles/crypto_coding_test.dir/rule
+crypto_test: CMakeFiles/crypto_test.dir/rule
 
-.PHONY : crypto_coding_test
-
-# clean rule for target.
-CMakeFiles/crypto_coding_test.dir/clean:
-	$(MAKE) -f CMakeFiles/crypto_coding_test.dir/build.make CMakeFiles/crypto_coding_test.dir/clean
-.PHONY : CMakeFiles/crypto_coding_test.dir/clean
+.PHONY : crypto_test
 
 # clean rule for target.
-clean: CMakeFiles/crypto_coding_test.dir/clean
+CMakeFiles/crypto_test.dir/clean:
+	$(MAKE) -f CMakeFiles/crypto_test.dir/build.make CMakeFiles/crypto_test.dir/clean
+.PHONY : CMakeFiles/crypto_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/crypto_test.dir/clean
 
 .PHONY : clean
 

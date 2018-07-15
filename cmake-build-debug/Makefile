@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5540.8/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -E remove -f
+RM = /home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5540.8/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/grant/Workspace/git/crypto-test/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5540.8/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5540.8/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named crypto_coding_test
+# Target rules for targets named crypto_test
 
 # Build rule for target.
-crypto_coding_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 crypto_coding_test
-.PHONY : crypto_coding_test
+crypto_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 crypto_test
+.PHONY : crypto_test
 
 # fast build rule for target.
-crypto_coding_test/fast:
-	$(MAKE) -f CMakeFiles/crypto_coding_test.dir/build.make CMakeFiles/crypto_coding_test.dir/build
-.PHONY : crypto_coding_test/fast
+crypto_test/fast:
+	$(MAKE) -f CMakeFiles/crypto_test.dir/build.make CMakeFiles/crypto_test.dir/build
+.PHONY : crypto_test/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/crypto_coding_test.dir/build.make CMakeFiles/crypto_coding_test.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/crypto_test.dir/build.make CMakeFiles/crypto_test.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/crypto_coding_test.dir/build.make CMakeFiles/crypto_coding_test.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/crypto_test.dir/build.make CMakeFiles/crypto_test.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/crypto_coding_test.dir/build.make CMakeFiles/crypto_coding_test.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/crypto_test.dir/build.make CMakeFiles/crypto_test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... crypto_coding_test"
+	@echo "... crypto_test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
