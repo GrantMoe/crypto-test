@@ -1,4 +1,11 @@
-/home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5540.8/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/grant/Workspace/git/crypto-test
+/home/grant/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.3684.76/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/grant/Workspace/git/crypto-test
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   system
+--   filesystem
+-- Boost_INCLUDE_DIRS: /usr/include
+-- Boost_LIBRARIES: /usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+-- Boost_VERSION: 105800
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/grant/Workspace/git/crypto-test/cmake-build-debug
